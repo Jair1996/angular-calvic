@@ -1,0 +1,37 @@
+.CardCategories {
+  display: grid;
+  gap: clamp(0.94rem, 0.73rem + 1.04vw, 1.56rem);
+  margin-bottom: clamp(5rem, 4.13rem + 4.38vw, 7.63rem);
+}
+
+@media screen and (min-width: 633px) {
+  .CardCategories {
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto auto;
+  }
+
+  .CardCategory:last-child {
+    grid-column: 1 / span 2;
+  }
+}
+
+@media screen and (min-width: 925px) {
+  .CardCategories {
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: auto;
+  }
+
+  .CardCategory:last-child {
+    grid-column: 3 / span 1;
+  }
+}
+
+@media screen and (min-width: 1160px) {
+  .CardCategories {
+    grid-template-columns: 1fr 1fr 2fr;
+  }
+
+  .CardCategory:last-child {
+    grid-column: 3 / span 1;
+  }
+}

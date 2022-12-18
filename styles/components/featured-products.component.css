@@ -1,0 +1,22 @@
+.FeaturedProducts {
+  margin-top: clamp(5rem, 4.21rem + 3.96vw, 7.38rem);
+  padding-top: clamp(1.25rem, 0.56rem + 3.44vw, 3.31rem);
+}
+
+.FeaturedProducts-details {
+  margin-bottom: clamp(3.13rem, 2.08rem + 5.21vw, 6.25rem);
+}
+
+.FeaturedProducts-title {
+  font-size: clamp(1.63rem, 1.27rem + 1.77vw, 2.69rem);
+  text-align: center;
+  margin-bottom: 7px;
+  margin-top: 0;
+  color: var(--text-color-alt);
+}
+
+.FeaturedProducts-description {
+  margin-top: 0;
+  font-size: clamp(0.88rem, 0.83rem + 0.21vw, 1rem);
+  text-align: center;
+}

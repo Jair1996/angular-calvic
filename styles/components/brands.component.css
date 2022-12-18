@@ -1,0 +1,11 @@
+.Brands {
+  margin-top: clamp(3.75rem, 3.17rem + 2.92vw, 5.5rem);
+  background-color: #ececec;
+  padding: clamp(1.88rem, 1.63rem + 1.25vw, 2.63rem) 20px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 50px;
+  justify-content: space-around;
+  align-items: center;
+  margin-bottom: clamp(3.75rem, 3.21rem + 2.71vw, 5.38rem);
+}

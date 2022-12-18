@@ -1,0 +1,22 @@
+@import url('./styles/base.css');
+
+@import url('./styles/components/header.component.css');
+@import url('./styles/components/menu.component.css');
+@import url('./styles/components/menu-mobile.component.css');
+@import url('./styles/components/hero.component.css');
+@import url('./styles/components/button.component.css');
+@import url('./styles/components/card-categories.css');
+@import url('./styles/components/card-category.component.css');
+@import url('./styles/components/benefits.component.css');
+@import url('./styles/components/banner.component.css');
+@import url('./styles/components/brands.component.css');
+@import url('./styles/components/footer.component.css');
+@import url('./styles/components/banner-about-us.component.css');
+@import url('./styles/components/content-about-us.component.css');
+@import url('./styles/components/featured-products.component.css');
+@import url('./styles/components/product-grid.component.css');
+@import url('./styles/components/product-grid-item.component.css');
+@import url('./styles/components/loader.component.css');
+
+@import url('./styles/pages/product.component.css');
+@import url('./styles/pages/catalog.component.css');

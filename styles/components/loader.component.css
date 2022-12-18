@@ -1,0 +1,21 @@
+@keyframes loader {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.Loader {
+  width: 5vw;
+  height: 5vw;
+  margin-left: auto;
+  margin-right: auto;
+  border-radius: 50%;
+  border: 0.5vw solid rgba(0, 0, 0, 0.1);
+  border-left-color: #09f;
+  animation: loader 1s ease-out infinite;
+  margin-top: clamp(5rem, 4.21rem + 3.96vw, 7.38rem);
+}

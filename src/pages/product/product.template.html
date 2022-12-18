@@ -1,0 +1,67 @@
+<app-loader ng-if="$ctrl.loading"></app-loader>
+<div ng-if="!$ctrl.loading" class="Product">
+  <section class="Product-images">
+    <div class="ProductImages">
+      <div class="Product-smallImageContainer">
+        <img
+          class="Product-smallImage"
+          ng-repeat="img in $ctrl.product.images"
+          ng-src="{{img}}"
+          ng-click="$ctrl.handleChangeImage(img)"
+          alt="imagen" />
+      </div>
+      <img class="Product-bigImage" ng-src="{{$ctrl.bigImage}}" alt="imagen producto" />
+    </div>
+  </section>
+  <section class="Product-info">
+    <p class="ProductInfo-brand m-0">{{$ctrl.product.brand}}</p>
+    <p class="ProductInfo-model m-0">{{$ctrl.product.model}}</p>
+    <p class="ProductInfo-stock m-0">Stock: {{$ctrl.product.qty}}</p>
+    <p class="ProductInfo-sku m-0">SKU: {{$ctrl.product.sku}}</p>
+    <div class="ProductInfo-priceContainer">
+      <p class="ProductInfo-priceFinal m-0">{{$ctrl.product.price | currency:"S/. "}}</p>
+    </div>
+    <div class="ProductInfo-sizeContainer">
+      <div>
+        <p class="ProductInfo-sizeContainerTitle m-0">Tallas</p>
+        <div class="ProductInfo-items">
+          <div class="ProductInfo-sizeContainerContent m-0" ng-repeat="size in $ctrl.product.sizes">
+            <input
+              class="ProductInfo-cbSize"
+              ng-click="$ctrl.handleClick(size)"
+              type="radio"
+              name="cbSize" />
+            <p class="ProductInfo-cbSize_text m-0">{{size}}</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="ProductInfo-buttonContainer">
+      <app-button text="Agregar al carrito" path="carrito"></app-button>
+    </div>
+  </section>
+  <section class="Product-description">
+    <h2 class="ProductDescription-title ProductDescription-m-0">Acerca del producto</h2>
+    <h3 class="ProductDescription-subtitle ProductDescription-m-0">Descripción</h3>
+    <p class="ProductDescription-description ProductDescription-m-0">
+      {{$ctrl.product.description}}
+    </p>
+    <h3 class="ProductDescription-subtitle ProductDescription-m-0">Especificaciones</h3>
+    <div class="ProductDescription-specificationsContainer">
+      <div>
+        <p
+          ng-repeat="e in $ctrl.product.specifications"
+          class="ProductDescription-specification title ProductDescription-m-0">
+          {{e.name}}
+        </p>
+      </div>
+      <div>
+        <p
+          ng-repeat="e in $ctrl.product.specifications"
+          class="ProductDescription-specification content ProductDescription-m-0">
+          {{e.content}}
+        </p>
+      </div>
+    </div>
+  </section>
+</div>

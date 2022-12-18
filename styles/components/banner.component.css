@@ -1,0 +1,70 @@
+.Banner {
+  border-radius: clamp(1.25rem, 1.04rem + 1.04vw, 1.88rem);
+  display: flex;
+  flex-direction: column;
+  padding: clamp(1.88rem, 1.56rem + 1.56vw, 2.81rem);
+  gap: 20px;
+  position: relative;
+  margin-top: clamp(8.13rem, 6.31rem + 9.06vw, 13.56rem);
+}
+
+.Banner-image {
+  position: absolute;
+  width: clamp(16.13rem, 10rem + 30.63vw, 34.5rem);
+  top: calc(clamp(4.44rem, 3.27rem + 5.83vw, 7.94rem) * -1);
+  left: clamp(1.63rem, -0.43rem + 10.26vw, 7.78rem);
+}
+
+.Banner-item {
+  text-align: center;
+}
+
+.Banner-description,
+.Banner-title,
+.Banner-textBg {
+  margin: 0;
+}
+
+.Banner-title,
+.Banner-textBg {
+  text-transform: uppercase;
+  font-weight: 700;
+}
+
+.Banner-textBg {
+  font-size: clamp(2.5rem, 1.25rem + 6.25vw, 6.25rem);
+}
+
+.Banner-title {
+  font-size: clamp(1.25rem, 0.77rem + 2.4vw, 2.69rem);
+}
+.Banner-description {
+  font-size: clamp(0.88rem, 0.83rem + 0.21vw, 1rem);
+}
+
+.Banner-description,
+.Banner-title {
+  color: white;
+  margin-bottom: clamp(1.25rem, 1.02rem + 1.15vw, 1.94rem);
+}
+
+@media screen and (min-width: 877px) {
+  .Banner {
+    flex-direction: row;
+  }
+
+  .Banner-item {
+    text-align: start;
+  }
+
+  .Banner-item:first-child {
+    width: 85%;
+  }
+
+  .Banner-item:last-child {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+}

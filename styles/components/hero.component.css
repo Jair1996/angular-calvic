@@ -1,0 +1,37 @@
+.Hero {
+  background: linear-gradient(106.05deg, #DCDCDC 60.21%, rgba(220, 220, 220, 0.9) 87.43%, #F1F1F1 101.61%);
+  border-radius: clamp(1.25rem, 1.04rem + 1.04vw, 1.88rem);
+  padding: clamp(2.50rem, 0.58rem + 9.58vw, 8.25rem);
+  position: relative;
+  display: flex;
+  align-items: center;
+  margin-bottom: 31px;
+  margin-top: 25px;
+}
+
+.Hero-image {
+  width: clamp(14.19rem, 4.98rem + 46.02vw, 41.80rem);
+  position: absolute;
+  right: clamp(2.50rem, 0.58rem + 9.58vw, 8.25rem);
+}
+
+.Hero-design, .Hero-desc {
+  color: #A38B3B;
+  margin: 0;
+  margin-bottom: clamp(0.63rem, 0.42rem + 1.04vw, 1.25rem);
+}
+
+.Hero-design {
+  font-size: clamp(1.00rem, 0.83rem + 0.83vw, 1.50rem);
+}
+
+.Hero-desc {
+  font-size: clamp(1.56rem, 0.48rem + 5.42vw, 4.81rem);
+}
+
+.Hero-details h1 {
+  color: #fff;
+  font-size: clamp(5.00rem, 3.27rem + 8.65vw, 10.19rem);
+  margin: 0;
+  margin-bottom: clamp(0.63rem, 0.42rem + 1.04vw, 1.25rem);
+}

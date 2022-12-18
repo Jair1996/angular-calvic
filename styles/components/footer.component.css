@@ -1,0 +1,70 @@
+.Footer {
+  display: grid;
+  gap: 25px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+.Footer-logo {
+  width: 100px;
+}
+
+.Footer figure {
+  margin: 0;
+}
+
+.Footer h2 {
+  font-weight: 700;
+  font-size: 16px;
+  margin: 0;
+  margin-bottom: 30px;
+}
+
+.Footer p {
+  margin: 0;
+  margin-bottom: 9px;
+}
+
+.Footer p,
+.Footer link {
+  font-size: 14px;
+}
+
+.Footer nav {
+  display: flex;
+  flex-direction: column;
+  gap: 9px;
+}
+
+.Footer-redes {
+  display: flex;
+  gap: 20px;
+}
+
+.Footer-redes figure {
+  vertical-align: middle;
+}
+
+@media screen and (min-width: 500px) {
+  .Footer .content-wrapper {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 70px;
+  }
+
+  .Footer h2 {
+    font-size: 18px;
+  }
+
+  .Footer p,
+  .Footer link {
+    font-size: 16px;
+  }
+}
+
+@media screen and (min-width: 660px) {
+  .Footer .content-wrapper {
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    column-gap: 20px;
+  }
+}

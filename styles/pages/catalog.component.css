@@ -1,0 +1,83 @@
+.Catalog {
+  margin-top: 25px;
+  margin-bottom: clamp(3.75rem, 3.21rem + 2.71vw, 5.38rem);
+}
+
+@media screen and (min-width: 596px) {
+  .Catalog {
+    display: grid;
+    grid-template-columns: 1fr 5fr;
+    gap: 20px;
+  }
+}
+
+/* MENU CATALOG */
+
+.MenuCatalog {
+  position: relative;
+  margin-bottom: 20px;
+}
+
+.MenuCatalog-img {
+  width: 48px;
+}
+
+.MenuCatalog-nav {
+  z-index: 99;
+  position: absolute;
+  background-color: #fff;
+  width: 50%;
+  left: -105%;
+  top: 100%;
+  display: flex;
+  flex-direction: column;
+  transition: 0.9s;
+  border: 1px solid var(--text-color-primary);
+  padding: 15px;
+}
+
+.MenuCatalog-active {
+  left: 0;
+}
+
+.MenuCatalog-colorActive {
+  color: var(--primary-color);
+}
+
+.MenuCatalog-list {
+  list-style: none;
+  padding-left: 20px;
+}
+
+.MenuCatalog-titleList {
+  color: var(--text-color-alt);
+  list-style: none;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+  outline: 0;
+}
+
+.MenuCatalog-item {
+  margin-bottom: clamp(0.31rem, 0.23rem + 0.42vw, 0.56rem);
+  cursor: pointer;
+}
+
+.MenuCatalog-list,
+.MenuCatalog-item {
+  font-size: clamp(0.88rem, 0.83rem + 0.21vw, 1rem);
+}
+
+@media screen and (min-width: 596px) {
+  .MenuCatalog-nav {
+    position: static;
+    width: auto;
+    border: none;
+    padding: 0;
+  }
+
+  .MenuCatalog-img {
+    display: none;
+  }
+}

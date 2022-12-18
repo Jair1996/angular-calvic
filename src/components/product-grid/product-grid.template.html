@@ -1,0 +1,4 @@
+<!-- TODO: LOADER -->
+<div class="ProductGrid">
+  <app-product-grid-item ng-repeat="product in $ctrl.products | filter:$ctrl.category | filter:$ctrl.subcategory" product="product"></app-product-grid-item>
+</div>

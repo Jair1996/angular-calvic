@@ -1,0 +1,48 @@
+.Header {
+  width: 100%;
+  background-color: black;
+  height: var(--header-height);
+  position: fixed;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  background-color: white;
+  box-shadow: 0px 3px 9px rgba(141, 139, 139, 0.14);
+  z-index: 100;
+}
+
+.Header-logo {
+  width: 100px;
+}
+
+ul {
+  margin: 0;
+}
+
+.Menu,
+app-menu {
+  display: none;
+}
+
+@media screen and (min-width: 750px) {
+  .MenuMobile,
+  app-menu-mobile {
+    display: none;
+  }
+
+  .Menu,
+  app-menu {
+    display: block;
+  }
+
+  .Header {
+    justify-content: flex-start;
+  }
+
+  .Header-logo {
+    width: 116px;
+    margin-right: 50px;
+  }
+}

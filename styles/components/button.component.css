@@ -1,0 +1,36 @@
+.Button {
+  font-size: clamp(0.75rem, 0.67rem + 0.42vw, 1rem);
+  padding: 1em 2em;
+  border-radius: 1.8em;
+  color: white;
+  background-color: var(--primary-color);
+  border: none;
+  font-weight: 700;
+  position: relative;
+  z-index: 1;
+  cursor: pointer;
+}
+
+.Button:hover {
+  background-color: var(--primary-color-alt);
+}
+
+.Button.ghost {
+  background-color: #fff;
+  color: var(--primary-color-alt);
+}
+
+.Button.ghost:hover {
+  background-color: var(--primary-color-alt);
+  color: white;
+}
+
+.Button.ghost.yellow {
+  color: #ffc807;
+}
+
+.Button.ghost.yellow:hover {
+  background-color: #ffc807;
+  color: #fff;
+  outline: 1px solid #fff;
+}

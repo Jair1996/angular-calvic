@@ -1,0 +1,12 @@
+<div ng-click="$ctrl.handleClick()" class="ProductGridItem">
+  <figure>
+    <img class="ProductGridItem-image" ng-src="{{$ctrl.product.images[0]}}" alt="ad" />
+  </figure>
+  <div class="ProductGridItem-details">
+    <p class="ProductGridItem-brand">{{$ctrl.product.brand}}</p>
+    <p class="ProductGridItem-model">{{$ctrl.product.model}}</p>
+    <div class="ProductGridItem-priceContainer">
+      <p class="ProductGridItem-price">{{$ctrl.product.price | currency:"S/. "}}</p>
+    </div>
+  </div>
+</div>

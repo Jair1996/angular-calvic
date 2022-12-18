@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Calvic</title>
+    <link rel="stylesheet" href="./style.css">
+    <script
+      src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"
+      defer></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/angular-route/1.8.3/angular-route.min.js"
+      defer></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/angular-resource/1.8.3/angular-resource.min.js"
+      defer></script>
+
+    <script src="./src/app.module.js" defer></script>
+    <script src="./src/app.config.js" defer></script>
+
+    <script src="./src/pages/pages.module.js" defer></script>
+    <script src="./src/pages/home/home.component.js" defer></script>
+    <script src="./src/pages/catalog/catalog.component.js" defer></script>
+    <script src="./src/pages/about-us/about-us.component.js" defer></script>
+    <script src="./src/pages/product/product.component.js" defer></script>
+
+    <script src="./src/components/components.module.js" defer></script>
+    <script src="./src/components/header/header.component.js" defer></script>
+    <script src="./src/components/menu/menu.component.js" defer></script>
+    <script src="./src/components/menu-mobile/menu-mobile.component.js" defer></script>
+    <script src="./src/components/hero/hero.component.js" defer></script>
+    <script src="./src/components/button/button.component.js" defer></script>
+    <script src="./src/components/card-categories/card-categories.component.js" defer></script>
+    <script src="./src/components/card-category/card-category.component.js" defer></script>
+    <script src="./src/components/benefits/benefits.component.js" defer></script>
+    <script src="./src/components/banner/banner.component.js" defer></script>
+    <script src="./src/components/brands/brands.component.js" defer></script>
+    <script src="./src/components/footer/footer.component.js" defer></script>
+    <script src="./src/components/banner-about-us/banner-about-us.component.js" defer></script>
+    <script src="./src/components/content-about-us/content-about-us.component.js" defer></script>
+    <script src="./src/components/featured-products/featured-products.component.js" defer></script>
+    <script src="./src/components/product-grid/product-grid.component.js" defer></script>
+    <script src="./src/components/product-grid-item/product-grid-item.component.js" defer></script>
+    <script src="./src/components/loader/loader.component.js" defer></script>
+  </head>
+  <body ng-app="app">
+    <div class="App-container">
+      <app-header></app-header>
+
+      <main class="container">
+        <div class="content-wrapper">
+          <div ng-view></div>
+        </div>
+      </main>
+
+      <app-footer></app-footer>
+    </div>
+  </body>
+</html>

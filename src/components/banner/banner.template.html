@@ -1,0 +1,13 @@
+<section class="Banner" ng-style="{{ $ctrl.bcolor }}">
+  <img class="Banner-image" ng-src="{{$ctrl.img}}" alt="banner" />
+  <div class="Banner-item">
+    <p class="Banner-textBg" ng-style="{{ $ctrl.textbgcolor }}">{{$ctrl.textbg}}</p>
+  </div>
+  <div class="Banner-item">
+    <p class="Banner-title">{{$ctrl.texttitle}}</p>
+    <p class="Banner-description">{{$ctrl.textdescription}}</p>
+    <div>
+      <app-button text="Ver Catálogo" type="ghost" path="catalogo"></app-button>
+    </div>
+  </div>
+</section>

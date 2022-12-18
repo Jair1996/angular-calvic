@@ -1,0 +1,16 @@
+.Menu-link {
+  margin-right: 41px;
+}
+
+.Menu-link:focus {
+  color: var(--primary-color);
+}
+
+.Menu-link:hover {
+  color: var(--primary-color);
+}
+
+.Menu-link:active {
+  color: var(--primary-color);
+}
+

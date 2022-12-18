@@ -1,0 +1,100 @@
+<div class="Catalog">
+  <div class="component">
+    <div class="MenuCatalog">
+      <img
+        class="MenuCatalog-img"
+        ng-click="$ctrl.handleTogleMenu()"
+        src="./src/assets/menu-catalog.svg"
+        alt="menu" />
+      <nav ng-class="{'MenuCatalog-active': $ctrl.toogle}" class="MenuCatalog-nav">
+        <details open>
+          <summary
+            ng-click="$ctrl.handleTogleMenu()"
+            class="MenuCatalog-titleList"
+            ng-style="{'margin-bottom': '14px'}">
+            <span ng-click="$ctrl.getProductFilter('','')"> Todos </span>
+          </summary>
+        </details>
+
+        <details open>
+          <summary class="MenuCatalog-titleList">
+            Hombre
+            <img src="./src/assets/arrow_bot.png" alt="flecha" />
+          </summary>
+          <ol class="MenuCatalog-list">
+            <li ng-click="$ctrl.handleTogleMenu()" class="MenuCatalog-item">
+              <a ng-click="$ctrl.getProductFilter('hombre','sandalias')" class="Menu-link">
+                Sandalias
+              </a>
+            </li>
+            <li ng-click="$ctrl.handleTogleMenu()" class="MenuCatalog-item">
+              <a ng-click="$ctrl.getProductFilter('hombre','zapatillas')" class="Menu-link">
+                Zapatillas
+              </a>
+            </li>
+            <li ng-click="$ctrl.handleTogleMenu()" class="MenuCatalog-item">
+              <a ng-click="$ctrl.getProductFilter('hombre','zapatos')" class="Menu-link">
+                Zapatos
+              </a>
+            </li>
+          </ol>
+        </details>
+
+        <details open>
+          <summary class="MenuCatalog-titleList">
+            Mujer
+            <img src="./src/assets/arrow_bot.png" alt="flecha" />
+          </summary>
+          <ol class="MenuCatalog-list">
+            <li ng-click="$ctrl.handleTogleMenu()" class="MenuCatalog-item">
+              <a ng-click="$ctrl.getProductFilter('mujer','sandalias')" class="Menu-link">
+                Sandalias
+              </a>
+            </li>
+            <li ng-click="$ctrl.handleTogleMenu()" class="MenuCatalog-item">
+              <a ng-click="$ctrl.getProductFilter('mujer','zapatillas')" class="Menu-link">
+                Zapatillas
+              </a>
+            </li>
+            <li ng-click="$ctrl.handleTogleMenu()" class="MenuCatalog-item">
+              <a ng-click="$ctrl.getProductFilter('mujer','zapatos')" class="Menu-link">
+                Zapatos
+              </a>
+            </li>
+          </ol>
+        </details>
+
+        <details open>
+          <summary class="MenuCatalog-titleList">
+            Niños
+            <img src="./src/assets/arrow_bot.png" alt="flecha" />
+          </summary>
+          <ol class="MenuCatalog-list">
+            <li ng-click="$ctrl.handleTogleMenu()" class="MenuCatalog-item">
+              <a ng-click="$ctrl.getProductFilter('children','sandalias')" class="Menu-link">
+                Sandalias
+              </a>
+            </li>
+            <li ng-click="$ctrl.handleTogleMenu()" class="MenuCatalog-item">
+              <a ng-click="$ctrl.getProductFilter('children','zapatillas')" class="Menu-link">
+                Zapatillas
+              </a>
+            </li>
+            <li ng-click="$ctrl.handleTogleMenu()" class="MenuCatalog-item">
+              <a ng-click="$ctrl.getProductFilter('children','zapatos')" class="Menu-link">
+                Zapatos
+              </a>
+            </li>
+          </ol>
+        </details>
+      </nav>
+    </div>
+  </div>
+  <div class="component">
+    <app-loader ng-if="$ctrl.loading"></app-loader>
+    <app-product-grid
+      products="$ctrl.products"
+      category="{{$ctrl.category}}"
+      subcategory="{{$ctrl.subcategory}}"></app-product-grid>
+  </div>
+</div>

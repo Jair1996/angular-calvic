@@ -1,0 +1,34 @@
+.Benefits {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  margin-bottom: clamp(4.38rem, 4rem + 1.88vw, 5.5rem);
+}
+
+.Benfits-icon {
+  width: clamp(3.13rem, 2.88rem + 1.25vw, 3.88rem);
+}
+
+.Benfits-text {
+  font-weight: 700;
+  font-size: clamp(0.88rem, 0.83rem + 0.21vw, 1rem);
+}
+
+.Benefits-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+@media screen and (min-width: 623px) {
+  .Benefits {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+  }
+
+  .Benefits-item {
+    flex-direction: row;
+    gap: 26px;
+  }
+}
