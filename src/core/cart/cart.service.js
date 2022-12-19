@@ -25,6 +25,10 @@ angular.module('core.cart').factory('Cart', function ($rootScope) {
     return _productsInCart;
   }
 
+  function getQuantityProductsInCart() {
+    return _productsInCart.reduce((acc, product) => acc + product.quantity, 0);
+  }
+
   function subscribe(scope, callback) {
     const handler = $rootScope.$on('notifying-service-event', callback);
     scope.$on('$destroy', handler);
@@ -37,6 +41,7 @@ angular.module('core.cart').factory('Cart', function ($rootScope) {
   return {
     getProductsInCart,
     setProductInCart,
+    getQuantityProductsInCart,
     subscribe,
   };
 });

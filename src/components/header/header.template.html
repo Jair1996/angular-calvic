@@ -1,8 +1,18 @@
 <header class="Header">
-  <div class="content-wrapper">
-    <a href="#!/">
-      <img class="Header-logo" src="./src/assets/logo.png" alt="logo" />
-    </a>
+  <div class="content-wrapper Header-container">
+    <div>
+      <a href="#!/">
+        <img class="Header-logo" src="./src/assets/logo.png" alt="logo" />
+      </a>
+    </div>
+    <div>
+      <div class="Header-IconCartContainer">
+        <a href="#!/carrito">
+          <img class="Header-IconCart" src="./src/assets/shopping_cart.svg" alt="Icon Cart" />
+        </a>
+        <app-product-quantity class="Header-IconCartContainer__quantity"></app-product-quantity>
+      </div>
+    </div>
     <app-menu-mobile></app-menu-mobile>
     <app-menu></app-menu>
   </div>
