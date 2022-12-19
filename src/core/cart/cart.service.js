@@ -17,6 +17,37 @@ angular.module('core.cart').factory('Cart', function ($rootScope) {
     notify();
   }
 
+  function increment(id, size) {
+    const productFound = _productsInCart.find(
+      (product) => product._id === id && product.size === size
+    );
+    productFound.quantity += 1;
+    syncLocalStorage();
+    notify();
+  }
+
+  function decrement(id, size) {
+    const productFound = _productsInCart.find(
+      (product) => product._id === id && product.size === size
+    );
+    productFound.quantity -= 1;
+    syncLocalStorage();
+    notify();
+  }
+
+  function deleteProduct(id, size) {
+    _productsInCart = _productsInCart.filter(
+      (product) => product._id !== id || product.size !== size
+    );
+
+    syncLocalStorage();
+    notify();
+  }
+
+  function getOrderPrice() {
+    return _productsInCart.reduce((acc, product) => acc + product.quantity * product.price, 0);
+  }
+
   function syncLocalStorage() {
     localStorage.setItem('calvicProducts', JSON.stringify(_productsInCart));
   }
@@ -41,6 +72,10 @@ angular.module('core.cart').factory('Cart', function ($rootScope) {
   return {
     getProductsInCart,
     setProductInCart,
+    increment,
+    decrement,
+    getOrderPrice,
+    deleteProduct,
     getQuantityProductsInCart,
     subscribe,
   };

@@ -20,3 +20,5 @@
 
 @import url('./styles/pages/product.component.css');
 @import url('./styles/pages/catalog.component.css');
+@import url('./styles/pages/cart.component.css');
+@import url('./styles/pages/orden.component.css');
