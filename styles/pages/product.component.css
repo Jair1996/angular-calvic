@@ -309,3 +309,25 @@
 .ProductInfo-sizeContainerContent {
   position: relative;
 }
+
+.Product-ButtonAdd {
+  font-size: clamp(0.75rem, 0.67rem + 0.42vw, 1rem);
+  padding: 1em 2em;
+  border-radius: 1.8em;
+  color: white;
+  background-color: var(--primary-color);
+  border: none;
+  font-weight: 700;
+  position: relative;
+  z-index: 1;
+  cursor: pointer;
+}
+
+.Product-ButtonAdd.Product-ButtonAdd__disabled {
+  opacity: .5;
+  pointer-events: none;
+}
+
+.Product-ButtonAdd:hover {
+  background-color: var(--primary-color-alt);
+}

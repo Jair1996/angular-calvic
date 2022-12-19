@@ -1,1 +1,1 @@
-angular.module("app", ["ngRoute", "pagesModule", "componentsModule"]);
+angular.module('app', ['ngRoute', 'core', 'pagesModule', 'componentsModule']);

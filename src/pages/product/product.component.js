@@ -3,15 +3,34 @@ angular.module('pagesModule').component('appProduct', {
   controller: [
     '$routeParams',
     '$http',
-    function ButtonController($routeParams, $http) {
+    'Cart',
+    function ButtonController($routeParams, $http, Cart) {
       const self = this;
-      // TODO: AGREGAR INTERACTIVIDAD AL BOTON
+
       self.loading = true;
       self.bigImage = '';
       self.sizeSelected = undefined;
+
+      self.addCart = function () {
+        const { _id, brand, sku, price, images, model } = self.product;
+
+        const product = {
+          _id,
+          brand,
+          img: images[0],
+          model,
+          price,
+          sku,
+          size: self.sizeSelected,
+          quantity: 1,
+        };
+
+        Cart.setProductInCart(product);
+      };
+
       self.handleClick = function (sizeSelected) {
         self.sizeSelected = sizeSelected;
-        console.log(self.sizeSelected);
+        // console.log(self.sizeSelected);
       };
 
       $http

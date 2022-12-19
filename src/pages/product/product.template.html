@@ -37,7 +37,12 @@
       </div>
     </div>
     <div class="ProductInfo-buttonContainer">
-      <app-button text="Agregar al carrito" path="carrito"></app-button>
+      <button
+        ng-click="$ctrl.addCart()"
+        class="Product-ButtonAdd"
+        ng-class="{'Product-ButtonAdd__disabled': !$ctrl.sizeSelected}">
+        Agregar al carrito
+      </button>
     </div>
   </section>
   <section class="Product-description">
