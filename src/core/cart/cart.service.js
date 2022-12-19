@@ -17,6 +17,12 @@ angular.module('core.cart').factory('Cart', function ($rootScope) {
     notify();
   }
 
+  function resetCart() {
+    _productsInCart = [];
+    syncLocalStorage();
+    notify();
+  }
+
   function increment(id, size) {
     const productFound = _productsInCart.find(
       (product) => product._id === id && product.size === size
@@ -72,6 +78,7 @@ angular.module('core.cart').factory('Cart', function ($rootScope) {
   return {
     getProductsInCart,
     setProductInCart,
+    resetCart,
     increment,
     decrement,
     getOrderPrice,

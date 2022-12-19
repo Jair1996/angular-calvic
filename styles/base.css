@@ -69,3 +69,14 @@ a {
     --header-height: 53px;
   }
 }
+
+input,
+textarea {
+  background-color: #fff;
+  border: none;
+  color: var(--text-color-alt);
+}
+
+input:focus {
+  outline: none;
+}

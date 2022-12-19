@@ -1,0 +1,64 @@
+.Orden {
+  margin-bottom: 50px;
+}
+
+.Orden-Form label {
+  display: block;
+  margin-bottom: 10px;
+}
+
+.Orden-Form__inputGroup {
+  margin-bottom: 15px;
+}
+
+.Orden-Form__group {
+  display: flex;
+  gap: 10px;
+}
+
+.Orden-Form input {
+  padding: 15px;
+  border: 1px solid var(--text-color-primary);
+  border-radius: 20px;
+  width: 100%;
+}
+
+.Orden-Form input:invalid {
+  border: 1px solid red;
+}
+
+.Orden-Form input:valid {
+  border: 1px solid lawngreen;
+}
+
+.Orden-Form__metodosContainer {
+  position: relative;
+}
+
+.Orden-Form__metodos {
+  position: absolute;
+  top: 30%;
+  right: 15px;
+}
+
+.Cart-content.resumen.orden {
+  background-color: #fff;
+  color: var(--text-color-alt);
+  box-shadow: 0 0 20px 9px rgb(141 139 139 / 15%);
+  margin-bottom: 30px;
+}
+
+.Orden-Form__inputGroup:nth-child(3) {
+  margin-bottom: 30px;
+}
+
+@media screen and (min-width: 750px) {
+  .Cart-content.resumen.orden {
+    margin-top: 20px;
+  }
+}
+
+.OrdenLoader {
+  margin-top: 40px;
+  margin-bottom: 40px;
+}
